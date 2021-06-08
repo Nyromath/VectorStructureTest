@@ -1,0 +1,2 @@
+C:\Users\270121842\OneDrive - UP Education\Desktop\CS103\VectorStructureTest\Debug\VectorStructureTest.exe
+C:\Users\270121842\OneDrive - UP Education\Desktop\CS103\VectorStructureTest\Debug\VectorStructureTest.pdb
