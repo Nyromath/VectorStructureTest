@@ -29,19 +29,23 @@ struct Donor {
 
 int main()
 {
+    //opening files
     ifstream myFile;
     myFile.open("donors.csv", ios::in);
 
+    //declaring necessary variables
     string line;
     int linenum = 0;
 
     vector<Donor> donors;
     Donor transaction;
 
+    //Loop to take input from file
     while (getline(myFile, line)) {
         istringstream linestream(line);
         string item;
 
+        //String variables
         getline(linestream, item, ',');
         transaction.name = item;
         getline(linestream, item, ',');
@@ -61,6 +65,7 @@ int main()
         getline(linestream, item, ',');
         transaction.gender = item;
 
+        //Int Variables
         getline(linestream, item, ',');
         stringstream ss(item);
         ss >> transaction.contactNumber;
@@ -77,11 +82,12 @@ int main()
         stringstream year(item);
         year >> transaction.dobYear;
 
+        //Add structure to vector 'donors'.
         donors.push_back(transaction);
         linenum++;
     }
 
-    string search;
+    /*string search;
     cout << "search:\t";
     cin >> search;
 
@@ -99,5 +105,5 @@ int main()
                 cout << "sadge";
             }
         }
-    }
+    }*/
 }
